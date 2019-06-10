@@ -1,0 +1,46 @@
+1. How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+	Mi permette di velocizzare il confronto tra i due file e scovare errori di distrazione.
+
+2. How could having easy access to the entire history of a file make you a 
+	more efficient programmer in the long term?
+
+	Spesso alcune funzionalità presentano bug nelle versioni successive...
+	Poter confrontare la versione buggata con una in cui funzionava mi permette
+	di correggee in maniera efficiente gli errori.
+
+3. What do you think are the pros and cons of manually choosing when to create a
+	commit, like you do in Git, vs having versions automatically saved, like Google
+	docs does?
+
+    Il salvataggio automatico può essere comodo perchè non devi preoccuparti 
+    di farlo manualmente, ma risulta meno efficiente di quello manuale perchè
+    conviene avere commit di momenti specifici della programmazione; come ad esempio 
+    quando si introduce una funzionalità o quando si risolve un bug. in questo modo 
+    il progetto risulta più scalabile e manutenibile.
+
+4. Why do you think some version control systems, like Git, allow saving multiple
+	files in one commit, while others, like Google Docs, treat each file separately?
+
+    Nei progetti di programmazione, come ad esempio la creazione di una pagina web, 
+    ci sono più file che descrivono caratteristiche dello stesso oggetto. Quindi, 
+    modificando un oggetto capita di modificare più file ed è utile che il salvataggio
+    avvenga nella stessa commit.
+
+5. How can you use the commands git log and git diff to view the history of files?
+
+    Con git log ottengo la lista di tutte le versioni. Con git diff IdVersionePrecedente 
+    IdVersioneSuccessiva ottengo un confronto tra le due versioni con in verde le linee 
+    aggiunte, in rosso quelle rimosse.
+
+6. How might using version control make you more confident to make changes that
+	could break something?
+
+    Grazie al fatto che se ci sono errori ho la possibilità di ripristinare una versione 
+    precedente senza perdere il lavoro. 
+
+7. Now that you have your workspace set up, what do you want to try using Git for?
+
+    Progetti personali a lungo termine ma soprattutto progetti di gruppo dove ogni membro
+    si occupa di funzionalità differenti.
+~
