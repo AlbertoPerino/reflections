@@ -1,4 +1,4 @@
-1. What happens when you initialize a repository? Why do you need to do it?
+﻿1. What happens when you initialize a repository? Why do you need to do it?
 
 	Quando inizializzo una repo viene creato un file nascosto .git per tenere
 	traccia dei commit.
@@ -10,16 +10,39 @@
 	sto lavorando; la repository contiene i commit; la staging area contiene i file 
 	aggiunti dalla working directory, pronti per il prossimo commit.
 
-How can you use the staging area to make sure you have one commit per logical
-change?
+3. How can you use the staging area to make sure you have one commit per logical
+	change?
 
-What are some situations when branches would be helpful in keeping your history
-organized? How would branches help?
+	Se ho più file nella staging area c'è il rischio di fare un commit con diversi
+	cambiamenti a livello logico, quindi posso usare i comandi git diff e 
+	git diff --staged per vedere rispettivamente le differenze tra sa e wd, e tra 
+	sa e ultimo commit. Nel caso, posso modificare i file dalla sa per rendere il 
+	commit coerente.
 
-How do the diagrams help you visualize the branch structure?
+4. What are some situations when branches would be helpful in keeping your history
+	organized? How would branches help?
 
-What is the result of merging two branches together? Why do we represent it in
-the diagram the way we do?
+	Quando voglio provare ad aggiungere una funzionalità secondaria, ho bisogno 
+	di una demo semplice e funzionale. Nel frattempo i miei collaboratori possono 
+	continuare a lavorare sul ramo principale.
 
-What are the pros and cons of Git's automatic merging vs. always doing merges
-manually?
+5. How do the diagrams help you visualize the branch structure?
+
+	I diagrammi indentano i log di branch secondari identificandoli con un simbolo 
+	diverso da quelli del principale, e mostra il tutto nell'ordine di commit.
+
+6. What is the result of merging two branches together? Why do we represent it in
+	the diagram the way we do?
+
+	Crea un nuovo commit a partire sia da master sia da nomeB, con le funzionalità 
+	che sono state aggiunte in entrambi i rami, senza le funzionalità tolte in 
+	almeno un ramo. Il nuovo ramo ha quindi 2 padri, è utile quindi tenere il master
+	e cancellare l'altro git git branch -d.
+
+7. What are the pros and cons of Git's automatic merging vs. always doing merges
+	manually?
+
+	Farlo sempre manualmente è dispendioso in termini di tempo e nei casi in cui git 
+	non rileva conflitti è abbastanza affidabile lasciarlo fare al software. C'è da dire 
+	che è sempre utile dare un'occhiata a cosa è stato tolto dal proprio commit rispetto 
+	al merge per assicurarsi che non si verifichino bug futuri.
